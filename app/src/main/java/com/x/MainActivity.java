@@ -66,7 +66,20 @@ public class MainActivity extends AppCompatActivity {
         return result;
     }
 }
-class getObj implements Runnable{
-    @Override
-    public void run(){}
+class UserEntering{
+    private String body;
+    private static String part="";
+    private UserEntering(String this_part){
+        this.body = this_part;
+        this_part = "";
+    }
+    static String getEntering(String string){
+        if(string.equals("+")){
+            part = part.concat("^");
+        }
+        else {
+            part = part.concat(string);
+        }
+        return part;
+    }
 }
