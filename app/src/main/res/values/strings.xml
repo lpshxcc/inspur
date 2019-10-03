@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">X</string>
+    <string name="initText">没有输入</string>
+    <string name="text1_forward">方程1</string>
+    <string name="text2_forward">方程2</string>
+    <string name="BTx">X</string>
+    <string name="BTy">Y</string>
+    <string name="BT1">1</string>
+    <string name="BT2">2</string>
+    <string name="BT3">3</string>
+    <string name="BT4">4</string>
+    <string name="BT5">5</string>
+    <string name="BT6">6</string>
+    <string name="BT7">7</string>
+    <string name="BT8">8</string>
+    <string name="BT9">9</string>
+    <string name="BT0">0</string>
+    <string name="BT_add">+</string>
+    <string name="BT_reduce">-</string>
+    <string name="BT_times">*</string>
+    <string name="BT_divide">/</string>
+</resources>

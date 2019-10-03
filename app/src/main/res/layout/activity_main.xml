@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow android:layout_height="70dp">
+
+        <TextView
+            android:id="@+id/text1_forward"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/textBackground"
+            android:gravity="start"
+            android:text="@string/text1_forward"
+            android:textColor="@color/textColor"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/textBackground"
+            android:gravity="end"
+            android:textColor="@color/textColor"
+            android:textSize="70sp" />
+    </TableRow>
+
+    <TableRow android:layout_height="70dp">
+
+        <TextView
+            android:id="@+id/text2_forward"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/textBackground"
+            android:gravity="start"
+            android:text="@string/text2_forward"
+            android:textColor="@color/textColor"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/textBackground"
+            android:gravity="end"
+            android:textColor="@color/textColor"
+            android:textSize="70sp" />
+    </TableRow>
+
+    <TableRow style="?android:attr/buttonBarStyle">
+
+        <Button
+            android:id="@+id/BT_x"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/yellow"
+            android:gravity="center"
+            android:text="@string/BTx"
+            android:textSize="60sp" />
+
+        <Button
+            android:id="@+id/BT_y"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="@string/BTy"
+            android:textSize="60sp" />
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/BT1"
+            android:layout_weight="1"
+            android:text="@string/BT1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:textSize="60sp"/>
+        <Button
+            android:id="@+id/BT2"
+            android:layout_weight="1"
+            android:text="@string/BT2"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:textSize="60sp"/>
+        <Button
+            android:id="@+id/BT3"
+            android:layout_weight="1"
+            android:text="@string/BT3"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:textSize="60sp"/>
+        <Button
+            android:id="@+id/BT_add"
+            android:layout_weight="1"
+            android:text="@string/BT_add"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_comput"
+            android:textSize="60sp"/>
+    </TableRow>
+
+
+</TableLayout>
