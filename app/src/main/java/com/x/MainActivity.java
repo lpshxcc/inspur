@@ -37,6 +37,7 @@ package com.x;
  *             8B;.,,,,,,,.,.....          .           ..   .:;;;;iirrsss111h
  *            i@5,:::,,,,,,,,.... .                   . .:::;;;;;irrrss111111
  *            9Bi,:,,,,......                        ..r91;;;;;iirrsss1ss1111
+ *            神兽保佑无bug
  */
 
 
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    static double[] get(double a11,double a12,double b1,
+    static double[] getResult(double a11,double a12,double b1,
                          double a21,double a22,double b2) {
         double m, ai22, bi2, x, y;
         m = a21 / a21;
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         return result;
     }
 }
-class EachNumber{
-
+class getObj implements Runnable{
+    @Override
+    public void run(){}
 }
