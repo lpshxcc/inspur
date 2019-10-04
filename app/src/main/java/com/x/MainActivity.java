@@ -24,7 +24,7 @@ package com.x;
  *  SS       :: h@@@@@@@@@@#; .                     ...  .         ..,,,,iM5
  *  91  .    ;:.,1&@@@@@@MXs.                            .          .,,:,:&S
  *  hS ....  .:;,,,i3MMS1;..,..... .  .     ...                     ..,:,.99
- *  ,8; ..... .,:,..,8Ms:;,,,...                                     .,::.83
+ *  ,8; ..... .,:,..,8Ms:;,,,...                                      .,::.83
  *   s&: ....  .sS553B@@HX3s;,.    .,;13h.                            .:::&1
  *    SXr  .  ...;s3G99XA&X88Shss11155hi.                             ,;:h&,
  *     iH8:  . ..   ,;iiii;,::,,,,,.                                 .;irHA
@@ -40,7 +40,6 @@ package com.x;
  *            神兽保佑无bug
  */
 
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -52,8 +51,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    static double[] getResult(double a11,double a12,double b1,
-                         double a21,double a22,double b2) {
+
+    static double[] getResult(double a11, double a12, double b1,
+                              double a21, double a22, double b2) {
         double m, ai22, bi2, x, y;
         m = a21 / a21;
         ai22 = a22 - m * a12;
@@ -66,20 +66,28 @@ public class MainActivity extends AppCompatActivity {
         return result;
     }
 }
-class UserEntering{
+
+class UserEntering {
     private String body;
-    private static String part="";
-    private UserEntering(String this_part){
+    private static String part = "";
+
+    private UserEntering(String this_part) {
         this.body = this_part;
         this_part = "";
     }
-    static String getEntering(String string){
-        if(string.equals("+")){
+
+    static String getEntering(String string) {
+        if (string.equals("+")) {
             part = part.concat("^");
-        }
-        else {
+        } else {
             part = part.concat(string);
         }
         return part;
+    }
+    static UserEntering getObj(String inner){
+        if (inner.charAt(inner.length()-1)=='^'){
+            return new UserEntering(inner);
+        }
+        return null;
     }
 }
