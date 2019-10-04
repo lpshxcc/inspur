@@ -1,55 +1,159 @@
 package com.x;
 /**
- *               ii.                                         ;9ABH,
- *              SA391,                                    .r9GG35&G
- *              &#ii13Gh;                               i3X31i;:,rB1
- *              iMs,:,i5895,                         .5G91:,:;:s1:8A
- *               33::::,,;5G5,                     ,58Si,,:::,sHX;iH1
- *                Sr.,:;rs13BBX35hh11511h5Shhh5S3GAXS:.,,::,,1AG3i,GG
- *                .G51S511sr;;iiiishS8G89Shsrrsh59S;.,,,,,..5A85Si,h8
- *               :SB9s:,............................,,,.,,,SASh53h,1G.
- *            .r18S;..,,,,,,,,,,,,,,,,,,,,,,,,,,,,,....,,.1H315199,rX,
- *          ;S89s,..,,,,,,,,,,,,,,,,,,,,,,,....,,.......,,,;r1ShS8,;Xi
- *        i55s:.........,,,,,,,,,,,,,,,,.,,,......,.....,,....r9&5.:X1
- *       59;.....,.     .,,,,,,,,,,,...        .............,..:1;.:&s
- *      s8,..;53S5S3s.   .,,,,,,,.,..      i15S5h1:.........,,,..,,:99
- *      93.:39s:rSGB@A;  ..,,,,.....    .SG3hhh9G&BGi..,,,,,,,,,,,,.,83
- *      G5.G8  9#@@@@@X. .,,,,,,.....  iA9,.S&B###@@Mr...,,,,,,,,..,.;Xh
- *      Gs.X8 S@@@@@@@B:..,,,,,,,,,,. rA1 ,A@@@@@@@@@H:........,,,,,,.iX:
- *     ;9. ,8A#@@@@@@#5,.,,,,,,,,,... 9A. 8@@@@@@@@@@M;    ....,,,,,,,,S8
- *     X3    iS8XAHH8s.,,,,,,,,,,...,..58hH@@@@@@@@@Hs       ...,,,,,,,:Gs
- *    r8,        ,,,...,,,,,,,,,,.....  ,h8XABMMHX3r.          .,,,,,,,.rX:
- *   :9, .    .:,..,:;;;::,.,,,,,..          .,,.               ..,,,,,,.59
- *  .Si      ,:.i8HBMMMMMB&5,....                    .            .,,,,,.sMr
- *  SS       :: h@@@@@@@@@@#; .                     ...  .         ..,,,,iM5
- *  91  .    ;:.,1&@@@@@@MXs.                            .          .,,:,:&S
- *  hS ....  .:;,,,i3MMS1;..,..... .  .     ...                     ..,:,.99
- *  ,8; ..... .,:,..,8Ms:;,,,...                                      .,::.83
- *   s&: ....  .sS553B@@HX3s;,.    .,;13h.                            .:::&1
- *    SXr  .  ...;s3G99XA&X88Shss11155hi.                             ,;:h&,
- *     iH8:  . ..   ,;iiii;,::,,,,,.                                 .;irHA
- *      ,8X5;   .     .......                                       ,;iihS8Gi
- *         1831,                                                 .,;irrrrrs&@
- *           ;5A8r.                                            .:;iiiiirrss1H
- *             :X@H3s.......                                .,:;iii;iiiiirsrh
- *              r#h:;,...,,.. .,,:;;;;;:::,...              .:;;;;;;iiiirrss1
- *             ,M8 ..,....,.....,,::::::,,...         .     .,;;;iiiiiirss11h
- *             8B;.,,,,,,,.,.....          .           ..   .:;;;;iirrsss111h
- *            i@5,:::,,,,,,,,.... .                   . .:::;;;;;irrrss111111
- *            9Bi,:,,,,......                        ..r91;;;;;iirrsss1ss1111
- *            神兽保佑无bug
+ *            .,,       .,:;;iiiiiiiii;;:,,.     .,,
+ *          rGB##HS,.;iirrrrriiiiiiiiiirrrrri;,s&##MAS,
+ *         r5s;:r3AH5iiiii;;;;;;;;;;;;;;;;iiirXHGSsiih1,
+ *            .;i;;s91;;;;;;::::::::::::;;;;iS5;;;ii:
+ *          :rsriii;;r::::::::::::::::::::::;;,;;iiirsi,
+ *       .,iri;;::::;;;;;;::,,,,,,,,,,,,,..,,;;;;;;;;iiri,,.
+ *    ,9BM&,            .,:;;:,,,,,,,,,,,hXA8:            ..,,,.
+ *   ,;&@@#r:;;;;;::::,,.   ,r,,,,,,,,,,iA@@@s,,:::;;;::,,.   .;.
+ *    :ih1iii;;;;;::::;;;;;;;:,,,,,,,,,,;i55r;;;;;;;;;iiirrrr,..
+ *   .ir;;iiiiiiiiii;;;;::::::,,,,,,,:::::,,:;;;iiiiiiiiiiiiri
+ *   iriiiiiiiiiiiiiiii;;;::::::::::::::::;;;iiiiiiiiiiiiiiiir;
+ *  ,riii;;;;;;;;;;;;;:::::::::::::::::::::::;;;;;;;;;;;;;;iiir.
+ *  iri;;;::::,,,,,,,,,,:::::::::::::::::::::::::,::,,::::;;iir:
+ * .rii;;::::,,,,,,,,,,,,:::::::::::::::::,,,,,,,,,,,,,::::;;iri
+ * ,rii;;;::,,,,,,,,,,,,,:::::::::::,:::::,,,,,,,,,,,,,:::;;;iir.
+ * ,rii;;i::,,,,,,,,,,,,,:::::::::::::::::,,,,,,,,,,,,,,::i;;iir.
+ * ,rii;;r::,,,,,,,,,,,,,:,:::::,:,:::::::,,,,,,,,,,,,,::;r;;iir.
+ * .rii;;rr,:,,,,,,,,,,,,,,:::::::::::::::,,,,,,,,,,,,,:,si;;iri
+ *  ;rii;:1i,,,,,,,,,,,,,,,,,,:::::::::,,,,,,,,,,,,,,,:,ss:;iir:
+ *  .rii;;;5r,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sh:;;iri
+ *   ;rii;:;51,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.:hh:;;iir,
+ *    irii;::hSr,.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.,sSs:;;iir:
+ *     irii;;:iSSs:.,,,,,,,,,,,,,,,,,,,,,,,,,,,..:135;:;;iir:
+ *      ;rii;;:,r535r:...,,,,,,,,,,,,,,,,,,..,;sS35i,;;iirr:
+ *       :rrii;;:,;1S3Shs;:,............,:is533Ss:,;;;iiri,
+ *        .;rrii;;;:,;rhS393S55hh11hh5S3393Shr:,:;;;iirr:
+ *          .;rriii;;;::,:;is1h555555h1si;:,::;;;iirri:.
+ *            .:irrrii;;;;;:::,,,,,,,,:::;;;;iiirrr;,
+ *               .:irrrriiiiii;;;;;;;;iiiiiirrrr;,.
+ *                  .,:;iirrrrrrrrrrrrrrrrri;:.
+ *                        ..,:::;;;;:::,,.
  */
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
+    UserEntering[] enterings = new UserEntering[128];
+    short i = 0;
+    UserEntering temp = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button bt0 = findViewById(R.id.BT0);
+        Button bt1 = findViewById(R.id.BT1);
+        Button bt2 = findViewById(R.id.BT2);
+        Button bt3 = findViewById(R.id.BT3);
+        Button bt4 = findViewById(R.id.BT4);
+        Button bt5 = findViewById(R.id.BT5);
+        Button bt6 = findViewById(R.id.BT6);
+        Button bt7 = findViewById(R.id.BT7);
+        Button bt8 = findViewById(R.id.BT8);
+        Button bt9 = findViewById(R.id.BT9);
+        bt0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserEntering.part = UserEntering.getEntering("0");
+                temp = UserEntering.getObj(UserEntering.part);
+                if (temp != null){enterings[i]=temp;
+                    i += 1;}
+            }
+        });
+        bt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserEntering.part = UserEntering.getEntering("1");
+                temp = UserEntering.getObj(UserEntering.part);
+                if (temp != null){enterings[i]=temp;
+                    i += 1;}
+            }
+        });
+        bt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserEntering.part = UserEntering.getEntering("2");
+                temp = UserEntering.getObj(UserEntering.part);
+                if (temp != null){enterings[i]=temp;
+                    i += 1;}
+            }
+        });
+        bt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserEntering.part = UserEntering.getEntering("3");
+                temp = UserEntering.getObj(UserEntering.part);
+                if (temp != null){enterings[i]=temp;
+                    i += 1;}
+            }
+        });
+        bt4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserEntering.part = UserEntering.getEntering("4");
+                temp = UserEntering.getObj(UserEntering.part);
+                if (temp != null){enterings[i]=temp;
+                    i += 1;}
+            }
+        });
+        bt5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserEntering.part = UserEntering.getEntering("5");
+                temp = UserEntering.getObj(UserEntering.part);
+                if (temp != null){enterings[i]=temp;
+                    i += 1;}
+            }
+        });
+        bt6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserEntering.part = UserEntering.getEntering("6");
+                temp = UserEntering.getObj(UserEntering.part);
+                if (temp != null){enterings[i]=temp;
+                    i += 1;}
+            }
+        });
+        bt7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserEntering.part = UserEntering.getEntering("7");
+                temp = UserEntering.getObj(UserEntering.part);
+                if (temp != null){enterings[i]=temp;
+                    i += 1;}
+            }
+        });
+        bt8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserEntering.part = UserEntering.getEntering("8");
+                temp = UserEntering.getObj(UserEntering.part);
+                if (temp != null){enterings[i]=temp;
+                    i += 1;}
+            }
+        });
+        bt9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserEntering.part = UserEntering.getEntering("9");
+                temp = UserEntering.getObj(UserEntering.part);
+                if (temp != null){enterings[i]=temp;
+                    i += 1;}
+            }
+        });
+
+
+        Button bt_add = findViewById(R.id.BT_add);
+        Button bt_reduce = findViewById(R.id.BT_reduce);
+        Button bt_times = findViewById(R.id.BT_times);
+        Button bt_divide = findViewById(R.id.BT_divide);
     }
 
     static double[] getResult(double a11, double a12, double b1,
@@ -69,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
 
 class UserEntering {
     private String body;
-    private static String part = "";
+    static String part = "";
 
     private UserEntering(String this_part) {
         this.body = this_part;
@@ -77,15 +181,18 @@ class UserEntering {
     }
 
     static String getEntering(String string) {
-        if (string.equals("+")) {
+        if (string.equals("+") | string.equals("-")
+                | string.equals("*") | string.equals("/")) {
+            part = part.concat(string);
             part = part.concat("^");
         } else {
             part = part.concat(string);
         }
         return part;
     }
-    static UserEntering getObj(String inner){
-        if (inner.charAt(inner.length()-1)=='^'){
+
+    static UserEntering getObj(String inner) {
+        if (inner.charAt(inner.length() - 1) == '^') {
             return new UserEntering(inner);
         }
         return null;
