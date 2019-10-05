@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     UserEntering[] enterings = new UserEntering[128];
     short i = 0;
     UserEntering temp = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,8 +64,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("0");
                 temp = UserEntering.getObj(UserEntering.part);
-                if (temp != null){enterings[i]=temp;
-                    i += 1;}
+                if (temp != null) {
+                    enterings[i] = temp;
+                    i += 1;
+                }
             }
         });
         bt1.setOnClickListener(new View.OnClickListener() {
@@ -72,8 +75,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("1");
                 temp = UserEntering.getObj(UserEntering.part);
-                if (temp != null){enterings[i]=temp;
-                    i += 1;}
+                if (temp != null) {
+                    enterings[i] = temp;
+                    i += 1;
+                }
             }
         });
         bt2.setOnClickListener(new View.OnClickListener() {
@@ -81,8 +86,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("2");
                 temp = UserEntering.getObj(UserEntering.part);
-                if (temp != null){enterings[i]=temp;
-                    i += 1;}
+                if (temp != null) {
+                    enterings[i] = temp;
+                    i += 1;
+                }
             }
         });
         bt3.setOnClickListener(new View.OnClickListener() {
@@ -90,8 +97,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("3");
                 temp = UserEntering.getObj(UserEntering.part);
-                if (temp != null){enterings[i]=temp;
-                    i += 1;}
+                if (temp != null) {
+                    enterings[i] = temp;
+                    i += 1;
+                }
             }
         });
         bt4.setOnClickListener(new View.OnClickListener() {
@@ -99,8 +108,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("4");
                 temp = UserEntering.getObj(UserEntering.part);
-                if (temp != null){enterings[i]=temp;
-                    i += 1;}
+                if (temp != null) {
+                    enterings[i] = temp;
+                    i += 1;
+                }
             }
         });
         bt5.setOnClickListener(new View.OnClickListener() {
@@ -108,8 +119,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("5");
                 temp = UserEntering.getObj(UserEntering.part);
-                if (temp != null){enterings[i]=temp;
-                    i += 1;}
+                if (temp != null) {
+                    enterings[i] = temp;
+                    i += 1;
+                }
             }
         });
         bt6.setOnClickListener(new View.OnClickListener() {
@@ -117,8 +130,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("6");
                 temp = UserEntering.getObj(UserEntering.part);
-                if (temp != null){enterings[i]=temp;
-                    i += 1;}
+                if (temp != null) {
+                    enterings[i] = temp;
+                    i += 1;
+                }
             }
         });
         bt7.setOnClickListener(new View.OnClickListener() {
@@ -126,8 +141,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("7");
                 temp = UserEntering.getObj(UserEntering.part);
-                if (temp != null){enterings[i]=temp;
-                    i += 1;}
+                if (temp != null) {
+                    enterings[i] = temp;
+                    i += 1;
+                }
             }
         });
         bt8.setOnClickListener(new View.OnClickListener() {
@@ -135,8 +152,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("8");
                 temp = UserEntering.getObj(UserEntering.part);
-                if (temp != null){enterings[i]=temp;
-                    i += 1;}
+                if (temp != null) {
+                    enterings[i] = temp;
+                    i += 1;
+                }
             }
         });
         bt9.setOnClickListener(new View.OnClickListener() {
@@ -144,8 +163,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("9");
                 temp = UserEntering.getObj(UserEntering.part);
-                if (temp != null){enterings[i]=temp;
-                    i += 1;}
+                if (temp != null) {
+                    enterings[i] = temp;
+                    i += 1;
+                }
             }
         });
 
@@ -154,6 +175,42 @@ public class MainActivity extends AppCompatActivity {
         Button bt_reduce = findViewById(R.id.BT_reduce);
         Button bt_times = findViewById(R.id.BT_times);
         Button bt_divide = findViewById(R.id.BT_divide);
+        bt_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserEntering.part = UserEntering.getEntering("+");
+                temp = UserEntering.getObj(UserEntering.part);
+                enterings[i]=temp;
+                i++;
+            }
+        });
+        bt_reduce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserEntering.part = UserEntering.getEntering("-");
+                temp = UserEntering.getObj(UserEntering.part);
+                enterings[i]=temp;
+                i++;
+            }
+        });
+        bt_times.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserEntering.part = UserEntering.getEntering("*");
+                temp = UserEntering.getObj(UserEntering.part);
+                enterings[i]=temp;
+                i++;
+            }
+        });
+        bt_divide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserEntering.part = UserEntering.getEntering("/");
+                temp = UserEntering.getObj(UserEntering.part);
+                enterings[i]=temp;
+                i++;
+            }
+        });
     }
 
     static double[] getResult(double a11, double a12, double b1,

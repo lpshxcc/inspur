@@ -19,4 +19,7 @@
     <string name="BT_reduce">-</string>
     <string name="BT_times">*</string>
     <string name="BT_divide">/</string>
+    <string name="BT_equals">=</string>
+    <string name="text_x_forward">X:</string>
+    <string name="text_y_forward">Y:</string>
 </resources>

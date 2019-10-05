@@ -8,4 +8,5 @@
     <color name="skyBlue">#00FFFF</color>
     <color name="yellow">#F7FE2E</color>
     <color name="darkBlue">#08088A</color>
+    <color name="dark">#000000</color>
 </resources>
