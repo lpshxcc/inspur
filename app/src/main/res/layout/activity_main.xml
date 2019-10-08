@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TableRow android:layout_height="70dp">
+    <TableRow>
 
         <TextView
             android:id="@+id/text1_forward"
@@ -22,7 +22,7 @@
             android:background="@color/textBackground"
             android:gravity="end"
             android:textColor="@color/textColor"
-            android:textSize="70sp" />
+            android:textSize="40sp" />
     </TableRow>
 
     <TableRow>
@@ -44,7 +44,7 @@
             android:background="@color/textBackground"
             android:gravity="end"
             android:textColor="@color/textColor"
-            android:textSize="70sp" />
+            android:textSize="40sp" />
     </TableRow>
 
     <TableRow>
@@ -66,7 +66,7 @@
             android:background="@color/dark"
             android:gravity="end"
             android:textColor="@color/textColor"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
     </TableRow>
 
     <TableRow>
@@ -88,7 +88,7 @@
             android:background="@color/dark"
             android:gravity="end"
             android:textColor="@color/textColor"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
     </TableRow>
 
     <TableRow>
@@ -97,33 +97,31 @@
             android:id="@+id/BT1"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button"
+
             android:text="@string/BT1"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/BT2"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button"
             android:text="@string/BT2"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/BT3"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button"
             android:text="@string/BT3"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/BT4"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button"
+
             android:text="@string/BT4"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
     </TableRow>
 
@@ -133,33 +131,33 @@
             android:id="@+id/BT5"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button"
+
             android:text="@string/BT5"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/BT6"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button"
+
             android:text="@string/BT6"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/BT7"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button"
+
             android:text="@string/BT7"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/BT8"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button"
+
             android:text="@string/BT8"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
     </TableRow>
 
@@ -169,35 +167,31 @@
             android:id="@+id/BT9"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button"
             android:text="@string/BT9"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/BT0"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button"
             android:text="@string/BT0"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/BT_x"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/yellow"
             android:gravity="center"
             android:text="@string/BTx"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/BT_y"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/colorAccent"
             android:gravity="center"
             android:text="@string/BTy"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
 
     </TableRow>
@@ -208,42 +202,37 @@
             android:id="@+id/BT_add"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button_comput"
             android:text="@string/BT_add"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/BT_reduce"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button_comput"
             android:text="@string/BT_reduce"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/BT_divide"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button_comput"
             android:text="@string/BT_divide"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/BT_times"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button_comput"
             android:text="@string/BT_times"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/BT_equals"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/dark"
             android:text="@string/BT_equals"
             android:textColor="@color/textColor"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
 
     </TableRow>
 
