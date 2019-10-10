@@ -155,9 +155,14 @@
             android:id="@+id/BT8"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-
             android:text="@string/BT8"
             android:textSize="40sp" />
+        <Button
+            android:id="@+id/BT_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:text="@string/BT_change"/>
 
     </TableRow>
 
@@ -192,6 +197,13 @@
             android:gravity="center"
             android:text="@string/BTy"
             android:textSize="40sp" />
+        <Button
+            android:id="@+id/BT_is"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:text="@string/BT_is"/>
 
 
     </TableRow>
@@ -231,7 +243,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/BT_equals"
-            android:textColor="@color/textColor"
+            android:textColor="@color/dark"
+            android:textSize="40sp" />
+        <Button
+            android:id="@+id/BT_clean"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/BT_clean"
+            android:textColor="@color/dark"
             android:textSize="40sp" />
 
     </TableRow>

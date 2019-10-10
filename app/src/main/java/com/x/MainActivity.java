@@ -45,15 +45,17 @@ public class MainActivity extends AppCompatActivity {
     UserEntering[] enterings = new UserEntering[128];
     short i = 0;
     UserEntering temp = null;
+    UserEntering[] enterings0;
 
     static void displayAllEnters(UserEntering[] enterings, TextView textView) {
-        String str = "";
-        for (UserEntering entering : enterings) {
-            if (entering != null) {
-                str = str.concat(entering.body).concat("");
+        UserEntering[] enterings1 = UserEntering.groupByOperator(enterings, true);
+        String temp = "";
+        for (UserEntering enterings2 : enterings1) {
+            if (enterings2 != null) {
+                temp = temp.concat(enterings2.body);
             }
         }
-        textView.setText(str);
+        textView.setText(temp);
     }
 
 
@@ -84,6 +86,9 @@ public class MainActivity extends AppCompatActivity {
         final Button bt_times = findViewById(R.id.BT_times);
         final Button bt_divide = findViewById(R.id.BT_divide);
         final Button bt_equals = findViewById(R.id.BT_equals);
+        final Button bt_clean = findViewById(R.id.BT_clean);
+        final Button bt_is = findViewById(R.id.BT_is);
+        final Button bt_ch = findViewById(R.id.BT_change);
 
 
         bt0.setOnClickListener(new View.OnClickListener() {
@@ -91,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("0");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide);
+                        bt_times, bt_divide,false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
@@ -104,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("1");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide);
+                        bt_times, bt_divide,false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
@@ -117,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("2");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide);
+                        bt_times, bt_divide,false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
@@ -130,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("3");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide);
+                        bt_times, bt_divide,false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
@@ -143,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("4");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide);
+                        bt_times, bt_divide,false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
@@ -156,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("5");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide);
+                        bt_times, bt_divide,false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
@@ -169,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("6");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide);
+                        bt_times, bt_divide,false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
@@ -182,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("7");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide);
+                        bt_times, bt_divide,false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
@@ -195,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("8");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide);
+                        bt_times, bt_divide,false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
@@ -208,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("9");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide);
+                        bt_times, bt_divide,false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
@@ -217,36 +222,67 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        bt_ch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!UserEntering.part.trim().equalsIgnoreCase("")){
+                    enterings[i]=UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
+                            bt_times, bt_divide,true);
+                    i++;
+                }
+                enterings[i] = new UserEntering("^");
+                i++;
+            }
+        });
         bt_equals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!UserEntering.computer.equalsIgnoreCase("")) {
-                    temp = UserEntering.getObj(UserEntering.computer, bt_add, bt_reduce,
-                            bt_times, bt_divide);
-                    enterings[i] = temp;
-                    i++;
-                    UserEntering.computer = "";
-                }
-                if (UserEntering.part != null) {
-                    UserEntering temp_last = new UserEntering(UserEntering.part);
-                    enterings[i] = temp_last;
-                    i++;
-                }
-                displayAllEnters(enterings, textX);
+                temp = UserEntering.getObj(UserEntering.part,bt_add,bt_reduce
+                        ,bt_times,bt_divide,true);
+                if (temp != null){enterings[i] = temp;
+                i++;}
+                temp = new UserEntering("=");
+                enterings[i]=temp;
+                i++;
             }
         });
+        bt_is.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!UserEntering.part.trim().equalsIgnoreCase("")){
+                    enterings[i]=UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
+                            bt_times, bt_divide,true);
+                    i++;
+                }
+                int a11,a12,a21,a22,b1,b2;
+                String whole="";
+                for(UserEntering enter:enterings){
+                    if(enter!=null){
+                        whole=whole.concat(enter.body.trim());
+                    }
+                }
+                String whole1 = whole.substring(0,whole.indexOf('^'));
+                String whole2 = whole.substring(whole.indexOf('^')+1);
+                a11 = Integer.parseInt(whole1.substring(0,whole1.indexOf('x')));
+                a12 = Integer.parseInt(whole1.substring(whole1.indexOf('x')+2,whole1.indexOf('y')));
+                b1 = Integer.parseInt(whole1.substring(whole1.indexOf('=')+1));
+                a21 = Integer.parseInt(whole2.substring(0,whole2.indexOf('x')));
+                a22 = Integer.parseInt(whole2.substring(whole2.indexOf('x')+2,whole2.indexOf('y')));
+                b2 = Integer.parseInt(whole1.substring(whole2.indexOf('=')+1));
+            }
+        });
+
         bt_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("+");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide);
+                        bt_times, bt_divide,false);
                 enterings[i] = temp;
                 i++;
                 if (!UserEntering.computer.equalsIgnoreCase("")) {
                     temp = UserEntering.getObj(UserEntering.computer, bt_add, bt_reduce,
-                            bt_times, bt_divide);
+                            bt_times, bt_divide,false);
                     enterings[i] = temp;
                     i++;
                 }
@@ -257,12 +293,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("-");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide);
+                        bt_times, bt_divide,false);
                 enterings[i] = temp;
                 i++;
                 if (!UserEntering.computer.equalsIgnoreCase("")) {
                     temp = UserEntering.getObj(UserEntering.computer, bt_add, bt_reduce,
-                            bt_times, bt_divide);
+                            bt_times, bt_divide,false);
                     enterings[i] = temp;
                     i++;
                 }
@@ -273,12 +309,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("*");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide);
+                        bt_times, bt_divide,false);
                 enterings[i] = temp;
                 i++;
                 if (!UserEntering.computer.equalsIgnoreCase("")) {
                     temp = UserEntering.getObj(UserEntering.computer, bt_add, bt_reduce,
-                            bt_times, bt_divide);
+                            bt_times, bt_divide,false);
                     enterings[i] = temp;
                     i++;
                 }
@@ -289,15 +325,25 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("/");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide);
+                        bt_times, bt_divide,false);
                 enterings[i] = temp;
                 i++;
                 if (!UserEntering.computer.equalsIgnoreCase("")) {
                     temp = UserEntering.getObj(UserEntering.computer, bt_add, bt_reduce,
-                            bt_times, bt_divide);
+                            bt_times, bt_divide,false);
                     enterings[i] = temp;
                     i++;
                 }
+            }
+        });
+        bt_clean.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (UserEntering temp : enterings) {
+                    temp = null;
+                }
+                UserEntering.part = "";
+                UserEntering.computer = "";
             }
         });
 
@@ -306,7 +352,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("x");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide);
+                        bt_times, bt_divide,false);
                 if (temp != null) {
                     enterings[i] = temp;
                     i++;
@@ -318,27 +364,29 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("y");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide);
+                        bt_times, bt_divide,false);
                 if (temp != null) {
                     enterings[i] = temp;
                     i++;
                 }
             }
         });
-
-
+        bt_add.setEnabled(false);
+        bt_reduce.setEnabled(false);
+        bt_times.setEnabled(false);
+        bt_divide.setEnabled(false);
     }
 
 
-    static double[] getResult(double a11, double a12, double b1,
-                              double a21, double a22, double b2) {
-        double m, ai22, bi2, x, y;
-        m = a21 / a21;
+    static int[] getResult(int a11, int a12, int b1,
+                           int a21, int a22, int b2) {
+        int m, ai22, bi2, x, y;
+        m = a21 / a11;
         ai22 = a22 - m * a12;
         bi2 = b2 - m * b1;
         y = bi2 / ai22;
         x = (b1 - a12 * y) / a11;
-        double[] result = new double[2];
+        int[] result = new int[2];
         result[0] = x;
         result[1] = y;
         return result;
@@ -366,7 +414,12 @@ class UserEntering {
     }
 
     static UserEntering getObj(String inner, Button bt_add,
-                               Button bt_reduce, Button bt_times, Button bt_divide) {
+                               Button bt_reduce, Button bt_times, Button bt_divide,boolean force) {
+        if(force){
+            UserEntering temp = new UserEntering(UserEntering.part);
+            UserEntering.part="";
+            return temp;
+        }
         if (inner.charAt(inner.length() - 1) == '^') {
             UserEntering temp = new UserEntering(inner.substring(0, inner.length() - 1));
             UserEntering.part = "";
@@ -382,7 +435,10 @@ class UserEntering {
             bt_times.setEnabled(false);
             bt_divide.setEnabled(false);
             return temp_com;
-        } else {
+        } else if(inner.trim().equalsIgnoreCase("=")){
+            return new UserEntering(inner.trim());
+        }
+        else {
             bt_add.setEnabled(true);
             bt_reduce.setEnabled(true);
             bt_times.setEnabled(true);
@@ -391,5 +447,28 @@ class UserEntering {
 
         return null;
     }
+
+    static UserEntering[] groupByOperator(UserEntering[] args, boolean forced) {
+        UserEntering[] groupedEnter = new UserEntering[128];
+        String temp = "";
+        int i = 0;
+        for (UserEntering enter : args) {
+            if (enter != null) {
+                if (enter.body.trim().equalsIgnoreCase("+")
+                        | enter.body.trim().equalsIgnoreCase("-")) {
+                    groupedEnter[i] = new UserEntering(temp);
+                    i++;
+                    temp = enter.body.trim();
+                } else {
+                    temp = temp.concat(enter.body);
+                }
+            }
+        }
+        if (forced) {
+            groupedEnter[i] = new UserEntering(temp);
+        }
+        return groupedEnter;
+    }
+
 }
 

@@ -22,4 +22,7 @@
     <string name="BT_equals">=</string>
     <string name="text_x_forward">X:</string>
     <string name="text_y_forward">Y:</string>
+    <string name="BT_clean">C</string>
+    <string name="BT_is">is</string>
+    <string name="BT_change">CH</string>
 </resources>
