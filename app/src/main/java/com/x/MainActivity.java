@@ -40,10 +40,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.math.BigDecimal;
 
 public class MainActivity extends AppCompatActivity {
     UserEntering[] enterings = new UserEntering[128];
     short i = 0;
+    String enterString="";
     UserEntering temp = null;
     UserEntering[] enterings0;
 
@@ -79,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
 
         final TextView textX = findViewById(R.id.text_x);
         final TextView textY = findViewById(R.id.text_y);
+        final TextView text1 = findViewById(R.id.text1);
+        final TextView text2 = findViewById(R.id.text2);
 
 
         final Button bt_add = findViewById(R.id.BT_add);
@@ -96,11 +102,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("0");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide,false);
+                        bt_times, bt_divide, false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
                     i += 1;
+                }
+                enterString=enterString.concat("0");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
                 }
             }
         });
@@ -109,11 +122,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("1");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide,false);
+                        bt_times, bt_divide, false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
                     i += 1;
+                }
+                enterString=enterString.concat("1");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
                 }
             }
         });
@@ -122,11 +142,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("2");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide,false);
+                        bt_times, bt_divide, false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
                     i += 1;
+                }
+                enterString=enterString.concat("2");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
                 }
             }
         });
@@ -135,11 +162,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("3");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide,false);
+                        bt_times, bt_divide, false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
                     i += 1;
+                }
+                enterString=enterString.concat("3");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
                 }
             }
         });
@@ -148,11 +182,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("4");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide,false);
+                        bt_times, bt_divide, false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
                     i += 1;
+                }
+                enterString=enterString.concat("4");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
                 }
             }
         });
@@ -161,11 +202,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("5");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide,false);
+                        bt_times, bt_divide, false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
                     i += 1;
+                }
+                enterString=enterString.concat("5");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
                 }
             }
         });
@@ -174,11 +222,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("6");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide,false);
+                        bt_times, bt_divide, false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
                     i += 1;
+                }
+                enterString=enterString.concat("6");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
                 }
             }
         });
@@ -187,11 +242,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("7");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide,false);
+                        bt_times, bt_divide, false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
                     i += 1;
+                }
+                enterString=enterString.concat("7");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
                 }
             }
         });
@@ -200,11 +262,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("8");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide,false);
+                        bt_times, bt_divide, false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
                     i += 1;
+                }
+                enterString=enterString.concat("8");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
                 }
             }
         });
@@ -213,11 +282,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("9");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide,false);
+                        bt_times, bt_divide, false);
                 if (temp != null) {
                     UserEntering.part = "";
                     enterings[i] = temp;
                     i += 1;
+                }
+                enterString=enterString.concat("9");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
                 }
             }
         });
@@ -225,50 +301,82 @@ public class MainActivity extends AppCompatActivity {
         bt_ch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!UserEntering.part.trim().equalsIgnoreCase("")){
-                    enterings[i]=UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                            bt_times, bt_divide,true);
+                if (!UserEntering.part.trim().equalsIgnoreCase("")) {
+                    enterings[i] = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
+                            bt_times, bt_divide, true);
                     i++;
                 }
                 enterings[i] = new UserEntering("^");
                 i++;
+                enterString=enterString.concat("^");
             }
         });
         bt_equals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                temp = UserEntering.getObj(UserEntering.part,bt_add,bt_reduce
-                        ,bt_times,bt_divide,true);
-                if (temp != null){enterings[i] = temp;
-                i++;}
+                temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce
+                        , bt_times, bt_divide, true);
+                if (temp != null) {
+                    enterings[i] = temp;
+                    i++;
+                }
                 temp = new UserEntering("=");
-                enterings[i]=temp;
+                enterings[i] = temp;
                 i++;
+                enterString=enterString.concat("=");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
+                }
             }
         });
         bt_is.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!UserEntering.part.trim().equalsIgnoreCase("")){
-                    enterings[i]=UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                            bt_times, bt_divide,true);
+                double[] results;
+                if (!UserEntering.part.trim().equalsIgnoreCase("")) {
+                    enterings[i] = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
+                            bt_times, bt_divide, true);
                     i++;
                 }
-                int a11,a12,a21,a22,b1,b2;
-                String whole="";
-                for(UserEntering enter:enterings){
-                    if(enter!=null){
-                        whole=whole.concat(enter.body.trim());
+                double a11, a12, a21, a22, b1, b2;
+                String whole = "";
+                for (UserEntering enter : enterings) {
+                    if (enter != null) {
+                        whole = whole.concat(enter.body.trim());
                     }
                 }
-                String whole1 = whole.substring(0,whole.indexOf('^'));
-                String whole2 = whole.substring(whole.indexOf('^')+1);
-                a11 = Integer.parseInt(whole1.substring(0,whole1.indexOf('x')));
-                a12 = Integer.parseInt(whole1.substring(whole1.indexOf('x')+2,whole1.indexOf('y')));
-                b1 = Integer.parseInt(whole1.substring(whole1.indexOf('=')+1));
-                a21 = Integer.parseInt(whole2.substring(0,whole2.indexOf('x')));
-                a22 = Integer.parseInt(whole2.substring(whole2.indexOf('x')+2,whole2.indexOf('y')));
-                b2 = Integer.parseInt(whole1.substring(whole2.indexOf('=')+1));
+                String whole1 = whole.substring(0, whole.indexOf('^'));
+                String whole2 = whole.substring(whole.indexOf('^') + 1);
+                a11 = Double.parseDouble(whole1.substring(0, whole1.indexOf('x')));
+                a12 = Double.parseDouble(whole1.substring(whole1.indexOf('x') + 2, whole1.indexOf('y')));
+                b1 = Double.parseDouble(whole1.substring(whole1.indexOf('=') + 1));
+                a21 = Double.parseDouble(whole2.substring(0, whole2.indexOf('x')));
+                a22 = Double.parseDouble(whole2.substring(whole2.indexOf('x') + 2, whole2.indexOf('y')));
+                b2 = Double.parseDouble(whole2.substring(whole2.indexOf('=') + 1));
+                try {
+                    results = MainActivity.getResult(a11, a12, b1, a21, a22, b2);
+                    String resX, resY;
+                    resX = String.valueOf(results[0]);
+                    resY = String.valueOf(results[1]);
+                    if (resX.length() <= 8) {
+                        textX.setText(resX);
+                    } else {
+                        textX.setText(resX.substring(0, 8));
+                    }
+                    if (resY.length() <= 8) {
+                        textY.setText(resY);
+                    } else {
+                        textY.setText(resY.substring(0, 8));
+                    }
+                }
+                catch (ArithmeticException e){
+                    Toast.makeText(MainActivity.this,"ArithmeticException",
+                            Toast.LENGTH_LONG).show();
+                }
+
             }
         });
 
@@ -277,14 +385,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("+");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide,false);
+                        bt_times, bt_divide, false);
                 enterings[i] = temp;
                 i++;
                 if (!UserEntering.computer.equalsIgnoreCase("")) {
                     temp = UserEntering.getObj(UserEntering.computer, bt_add, bt_reduce,
-                            bt_times, bt_divide,false);
+                            bt_times, bt_divide, false);
                     enterings[i] = temp;
                     i++;
+                }
+                enterString=enterString.concat("+");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
                 }
             }
         });
@@ -293,14 +408,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("-");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide,false);
+                        bt_times, bt_divide, false);
                 enterings[i] = temp;
                 i++;
                 if (!UserEntering.computer.equalsIgnoreCase("")) {
                     temp = UserEntering.getObj(UserEntering.computer, bt_add, bt_reduce,
-                            bt_times, bt_divide,false);
+                            bt_times, bt_divide, false);
                     enterings[i] = temp;
                     i++;
+                }
+                enterString=enterString.concat("-");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
                 }
             }
         });
@@ -309,14 +431,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("*");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide,false);
+                        bt_times, bt_divide, false);
                 enterings[i] = temp;
                 i++;
                 if (!UserEntering.computer.equalsIgnoreCase("")) {
                     temp = UserEntering.getObj(UserEntering.computer, bt_add, bt_reduce,
-                            bt_times, bt_divide,false);
+                            bt_times, bt_divide, false);
                     enterings[i] = temp;
                     i++;
+                }
+                enterString=enterString.concat("*");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
                 }
             }
         });
@@ -325,25 +454,37 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("/");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide,false);
+                        bt_times, bt_divide, false);
                 enterings[i] = temp;
                 i++;
                 if (!UserEntering.computer.equalsIgnoreCase("")) {
                     temp = UserEntering.getObj(UserEntering.computer, bt_add, bt_reduce,
-                            bt_times, bt_divide,false);
+                            bt_times, bt_divide, false);
                     enterings[i] = temp;
                     i++;
+                }
+                enterString=enterString.concat("/");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
                 }
             }
         });
         bt_clean.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for (UserEntering temp : enterings) {
-                    temp = null;
+                for (short i=0;i<enterings.length-1;i++) {
+                    enterings[i]=null;
                 }
                 UserEntering.part = "";
                 UserEntering.computer = "";
+                enterString="";
+                text1.setText("");
+                text2.setText("");
+                textX.setText("");
+                textY.setText("");
             }
         });
 
@@ -352,10 +493,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("x");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide,false);
+                        bt_times, bt_divide, false);
                 if (temp != null) {
                     enterings[i] = temp;
                     i++;
+                }
+                enterString=enterString.concat("x");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
                 }
             }
         });
@@ -364,10 +512,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 UserEntering.part = UserEntering.getEntering("y");
                 temp = UserEntering.getObj(UserEntering.part, bt_add, bt_reduce,
-                        bt_times, bt_divide,false);
+                        bt_times, bt_divide, false);
                 if (temp != null) {
                     enterings[i] = temp;
                     i++;
+                }
+                enterString=enterString.concat("y");
+                if (enterString.contains("^")){
+                    text1.setText(enterString.substring(0,enterString.indexOf('^')));
+                    text2.setText(enterString.substring(enterString.indexOf('^')+1));
+                }else {
+                    text1.setText(enterString);
                 }
             }
         });
@@ -378,15 +533,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    static int[] getResult(int a11, int a12, int b1,
-                           int a21, int a22, int b2) {
-        int m, ai22, bi2, x, y;
+    static double[] getResult(double a11, double a12, double b1,
+                              double a21, double a22, double b2) {
+        double m, ai22, bi2, x, y;
+        double[] result = new double[2];
         m = a21 / a11;
         ai22 = a22 - m * a12;
         bi2 = b2 - m * b1;
         y = bi2 / ai22;
         x = (b1 - a12 * y) / a11;
-        int[] result = new int[2];
         result[0] = x;
         result[1] = y;
         return result;
@@ -414,10 +569,10 @@ class UserEntering {
     }
 
     static UserEntering getObj(String inner, Button bt_add,
-                               Button bt_reduce, Button bt_times, Button bt_divide,boolean force) {
-        if(force){
+                               Button bt_reduce, Button bt_times, Button bt_divide, boolean force) {
+        if (force) {
             UserEntering temp = new UserEntering(UserEntering.part);
-            UserEntering.part="";
+            UserEntering.part = "";
             return temp;
         }
         if (inner.charAt(inner.length() - 1) == '^') {
@@ -435,10 +590,9 @@ class UserEntering {
             bt_times.setEnabled(false);
             bt_divide.setEnabled(false);
             return temp_com;
-        } else if(inner.trim().equalsIgnoreCase("=")){
+        } else if (inner.trim().equalsIgnoreCase("=")) {
             return new UserEntering(inner.trim());
-        }
-        else {
+        } else {
             bt_add.setEnabled(true);
             bt_reduce.setEnabled(true);
             bt_times.setEnabled(true);
